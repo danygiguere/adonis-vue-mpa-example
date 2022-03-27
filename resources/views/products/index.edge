@@ -1,0 +1,21 @@
+@layout('layouts/app')
+
+@section('content')
+<section class="light-background">
+  <div class="container">
+      <h2 class="title text-center">Products</h2>
+      <div class="grid-1-2-3-4">
+          @each(product in products)
+            <div class="boxed text-center product">
+                <img class=img-responsive src="/images/product.png" alt="">
+                <p>{{ product.title }}</p>
+                <p class="price margin-top">{{ product.price }}$</p>
+                <div class="margin-top">
+                    <a href="{{ route('ProductsController.show', {id: product.id}) }}" class="button">View</a>
+                </div>
+            </div>
+          @endeach
+      </div>
+  </div>
+</section>
+@endsection 

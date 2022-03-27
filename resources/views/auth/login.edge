@@ -1,0 +1,5 @@
+@layout('layouts/app')
+
+@section('content')
+    <login-component :intended_url_prop="'{{ flashMessages.get('intendedUrl') }}'"></login-component>
+@endsection 

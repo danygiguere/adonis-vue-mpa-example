@@ -1,0 +1,17 @@
+@layout('layouts/app')
+
+@section('content')
+<section class="light-background">
+  <div class="container">
+      <h1 class="title text-center">Product: {{ product.title }}</h2>
+        <div class="boxed text-center product">
+          <img class=img-responsive src="/images/product.png" alt="">
+          <p>{{ product.title }}</p>
+          <p class="price margin-top">{{ product.price }}$</p>
+          <div class="margin-top">
+            <button>Add to cart</button>
+          </div>
+      </div>      
+  </div>
+</section>
+@endsection 
